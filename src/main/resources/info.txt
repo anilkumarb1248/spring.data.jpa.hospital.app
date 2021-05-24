@@ -1,0 +1,13 @@
+
+// MySql User Creation
+CREATE DATABASE  IF NOT EXISTS HOSPITAL_DATABASE;
+
+CREATE USER 'hospital'@'localhost' IDENTIFIED WITH mysql_native_password BY 'hospital';
+GRANT ALL PRIVILEGES ON HOSPITAL_DATABASE.* TO'hospital'@'localhost';
+
+// Oracle User Creation
+
+CREATE USER hospital IDENTIFIED BY hospital;
+GRANT CONNECT, RESOURCE, DBA TO hospital;
+GRANT UNLIMITED TABLESPACE TO hospital;
+
